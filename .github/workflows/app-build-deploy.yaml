@@ -23,7 +23,7 @@ jobs:
         run: |
           echo "$ssh_key" > ~/ssh_key
           chmod 600 ~/ssh_key
-          rsync -avrzP ./client/ --no-perms -O -e -v "ssh -i ~/ssh_key -o StrictHostKeyChecking=no" "$user"@"$target_ip":/var/gitdash/app
+          rsync -avrzP ./client/ --no-perms -O -e "ssh -i ~/ssh_key -o StrictHostKeyChecking=no" "$user"@"$target_ip":/var/gitdash/app
         env:
           ssh_key: ${{ secrets.CICD_SSH }}
           user: ${{ secrets.CICD_USER }}
