@@ -1,4 +1,4 @@
-name: NextJs app Build nad Deploy to Linode
+name: NextJs app Build and Deploy to Linode
 
 on:
   workflow_dispatch:
