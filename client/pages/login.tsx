@@ -59,7 +59,7 @@ export default function Home() {
                     colorScheme="teal"
                     leftIcon={<FaGithub />}
                     onClick={() =>
-                      signOut({ callbackUrl: "http://localhost:3000" })
+                      signOut({ callbackUrl: process.env.HOST_URL })
                     }
                   >
                     Sign Out
