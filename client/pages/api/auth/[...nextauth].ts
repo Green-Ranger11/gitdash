@@ -23,7 +23,7 @@ export default NextAuth({
      * @return {object}            JSON Web Token that will be saved
      */
     async redirect(url, baseUrl) {
-      return "/";
+      return process.env.JWT_SECRET+ "/";
     },
     async jwt(token, user, account, profile, isNewUser) {
       // Add access_token to the token right after signin
